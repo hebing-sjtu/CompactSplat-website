@@ -1,0 +1,11 @@
+.DS_Store
+._*
+.env
+.env.*
+*.env
+*.pem
+*.key
+.openai/
+.codex/
+.agents/
+node_modules/

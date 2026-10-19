@@ -13,7 +13,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="review-bar">Research code <span>Checkpoints pending release</span></div>
+  <div class="review-bar">Research code <span><a href="https://huggingface.co/binghe-sjtu/compactsplat">Weights repository</a></span></div>
   <header class="publication-header" id="top">
     <a class="wordmark" href="#top" aria-label="CompactSplat home"><span class="mark" aria-hidden="true">▦</span> CompactSplat</a>
     <h1><span>CompactSplat:</span> Spatially Adaptive Gaussian Distribution for Feedforward Scene Reconstruction</h1>
@@ -28,9 +28,10 @@
     </div>
     <p class="venue">NeurIPS 2026 <span>Poster</span></p>
     <div class="publication-links">
-      <a class="button" href="https://openreview.net/pdf?id=3sn6PeO6Ch"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6"/></svg>Paper</a>
+      <a class="button" href="https://arxiv.org/abs/2610.13177"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6"/></svg>Paper</a>
       <a class="button" href="https://openreview.net/forum?id=3sn6PeO6Ch"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v13H9l-5 4zM8 9h8M8 13h5"/></svg>OpenReview</a>
       <a class="button" href="https://github.com/hebing-sjtu/CompactSplat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 4l-4 16"/></svg>Code</a>
+      <a class="button" href="https://huggingface.co/binghe-sjtu/compactsplat">Models</a>
       <a class="button button-light" href="#bibtex">BibTeX</a>
     </div>
   </header>
@@ -93,7 +94,7 @@
       <p>CompactSplat changes <strong>where and at what scale primitives are allocated</strong>, while reusing a proven feedforward backbone. HRRC and the surface-continuity prior originate in <a href="https://hebing-sjtu.github.io/SurfSplat-website/">SurfSplat</a>. The results support retaining high-resolution rendering quality under sparsification; they do not establish watertight geometry or isolate every component’s contribution.</p>
       <p>Other non-pixel-aligned approaches explore learnable tokens (<a href="https://research.nvidia.com/labs/toronto-ai/tokengs/">TokenGS</a> and <a href="https://cvlab-kaist.github.io/C3G/">C3G</a>), voxel-aligned prediction (<a href="https://lhmd.top/volsplat/">VolSplat</a>), or subpixel primitive detection with adaptive patch density (<a href="https://arthurmoreau.github.io/OffTheGrid/">Off The Grid</a>). CompactSplat uses a hierarchical image-space quadtree, with a tunable partition threshold and scale-matched attribute sampling. These are complementary design choices; performance depends on the input protocol and primitive budget.</p>
       <details open><summary>Scope of the current evidence</summary><ul><li><strong>Calibrated cameras are required.</strong> CompactSplat assumes camera intrinsics and extrinsics; pose-free approaches such as <a href="https://github.com/facebookresearch/vggt">VGGT</a> and <a href="https://city-super.github.io/anysplat/">AnySplat</a> also estimate cameras from images.</li><li><strong>Cross-view redundancy remains.</strong> Allocation is performed per view. The gains from adding cross-view merging have not been established.</li><li><strong>Appearance is an imperfect guide.</strong> Noise and specularities can trigger extra subdivisions, while weak color changes may hide depth discontinuities.</li><li><strong>Component attribution remains incomplete.</strong> An isolated HPS comparison against finest-level-only sampling and transfer to a backbone without the surface prior are not established by the current results.</li></ul></details>
-      <p class="release-note">The <a href="https://github.com/hebing-sjtu/CompactSplat">code repository</a> contains training and evaluation source code. CompactSplat checkpoints are not yet published; upstream DepthSplat weights are not CompactSplat checkpoints.</p>
+      <p class="release-note">The <a href="https://github.com/hebing-sjtu/CompactSplat">code repository</a> contains training and evaluation source code. See the <a href="https://huggingface.co/binghe-sjtu/compactsplat">CompactSplat weights repository</a> for checkpoint files and availability; upstream DepthSplat weights are not CompactSplat checkpoints.</p>
     </section>
     <section class="section reading" id="bibtex">
       <div class="citation-heading"><h2>BibTeX</h2><button class="copy-button" id="copy-citation" type="button">Copy citation</button></div>
@@ -104,7 +105,10 @@
             Zhengxue Cheng and Rong Xie and Li Song and Wenjun Zhang},
   booktitle = {Advances in Neural Information Processing Systems},
   year = {2026},
-  url = {https://openreview.net/forum?id=3sn6PeO6Ch}
+  url = {https://arxiv.org/abs/2610.13177},
+  eprint = {2610.13177},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CV}
 }</code></pre><p id="copy-status" class="small" aria-live="polite"></p>
     </section>
   </main>

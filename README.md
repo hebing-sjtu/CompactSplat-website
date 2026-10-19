@@ -27,10 +27,10 @@ The result tables report paper values. See the [reproducibility notes](https://g
 
 Website repository: https://github.com/hebing-sjtu/CompactSplat-website
 
-Planned website URL: https://hebing-sjtu.github.io/CompactSplat-website/
+Website URL: https://hebing-sjtu.github.io/CompactSplat-website/
 
 This repository contains the static website only. The training and evaluation code is maintained in [CompactSplat](https://github.com/hebing-sjtu/CompactSplat).
 
-To publish after approval, enable GitHub Pages with **Deploy from a branch**, branch **main**, folder **/(root)**. The `.nojekyll` file serves these static files directly. No build step, external hosting service, or deployment credential is needed.
+GitHub Pages serves the website with **Deploy from a branch**, branch **main**, folder **/(root)**. The `.nojekyll` file serves these static files directly. No build step, external hosting service, or deployment credential is needed.
 
-GitHub Pages for personal accounts serves a public website, including when a supported plan allows the source repository to remain private. Keep Pages disabled until public website access is approved. The included `noindex` metadata and `robots.txt` discourage indexing; they do not restrict visitors.
+The website is publicly accessible through GitHub Pages. The included `noindex` metadata and `robots.txt` discourage indexing; they do not restrict visitors.
